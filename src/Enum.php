@@ -85,19 +85,19 @@ abstract class Enum
      */
     public static function getDescription($value): string
     {
-        return 
+        return
             self::getLocalizedDescription($value) ??
             self::getFriendlyKeyName(self::getKey($value));
     }
 
     /**
-     * Get the localized description if localization is enabled 
+     * Get the localized description if localization is enabled
      * for the enum and if they key exists in the lang file
      *
      * @param int|string $value
      * @return string
      */
-    private static function getLocalizedDescription($value): ?string
+    private static function getLocalizedDescription($value)
     {
         if (self::isLocalizable())
         {
