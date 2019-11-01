@@ -68,7 +68,7 @@ trait CastsEnums
      * @param  mixed  $value
      * @return \BenSampo\Enum\Enum|null
      */
-    protected function castToEnum($key, $value): ?Enum
+    protected function castToEnum($key, $value)
     {
         /** @var \BenSampo\Enum\Enum $enum */
         $enum = $this->enumCasts[$key];
