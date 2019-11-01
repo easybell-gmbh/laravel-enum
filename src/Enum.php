@@ -55,7 +55,7 @@ abstract class Enum implements EnumContract
         if (!static::hasValue($enumValue)) {
             throw new InvalidEnumMemberException($enumValue, $this);
         }
-        
+
         $this->value = $enumValue;
         $this->key = static::getKey($enumValue);
         $this->description = static::getDescription($enumValue);
@@ -207,7 +207,7 @@ abstract class Enum implements EnumContract
      * @param  mixed  $value
      * @return string|null
      */
-    protected static function getLocalizedDescription($value): ?string
+    protected static function getLocalizedDescription($value): string
     {
         if (static::isLocalizable())
         {
