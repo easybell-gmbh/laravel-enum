@@ -207,7 +207,7 @@ abstract class Enum implements EnumContract
      * @param  mixed  $value
      * @return string|null
      */
-    protected static function getLocalizedDescription($value): string
+    protected static function getLocalizedDescription($value)
     {
         if (static::isLocalizable())
         {
